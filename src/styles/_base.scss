@@ -1,0 +1,40 @@
+:root {
+  --color-grey-main: #f1f5f8;
+  --color-white: #fff;
+  --color-black: #222;
+  --color-grey2: #102a42;
+  --color-grey3: #617d98;
+  --color-grey4: #324d67;
+  --color-label: #063251;
+  --color-btn: #a5d5f8;
+  --color-btn-hover: #49a6e9;
+  --color-para: #617d98;
+  --color-black: #333333;
+  --color-danger: #ff9999;
+  --color-success: #99cc99;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+@mixin respond($breakpoint) {
+  @if ($breakpoint==tab-port) {
+    @media (max-width: 41.5em) {
+      @content;
+    }
+  }
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+body {
+  font-size: 2.8rem;
+  background-color: var(--color-grey-main);
+}
